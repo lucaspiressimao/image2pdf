@@ -45,7 +45,7 @@ def main():
             new_img = Image.open(path_temp_img)
 
             if(img_new_dpi_size > 1024):
-                multplication_rate = 1024.0 / (new_img * 1.0)
+                multplication_rate = 1024.0 / (img_new_dpi_size * 1.0)
                 resized_im = new_img.resize((round(new_img.size[0] * multplication_rate), round(new_img.size[1] * multplication_rate)))
             else:
                 resized_im = new_img
